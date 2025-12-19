@@ -450,6 +450,92 @@ const App: React.FC = () => {
         </Container>
       </Section>
 
+      {/* Structured Anamnesis Section */}
+      <Section className="bg-white border-t border-slate-100">
+        <Container>
+          <SectionHeading 
+            title="Anamnese Estruturada que Precede o Rastreio" 
+            subtitle="Antes de qualquer teste cognitivo, o NeuroRastreio organiza o contexto clínico com uma anamnese objetiva, padronizada e funcional."
+          />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
+               <div className="h-2 w-12 bg-blue-900 rounded-full mb-6"></div>
+               <h3 className="text-xl font-bold text-slate-900 mb-4">Anamnese Funcional Estruturada</h3>
+               <p className="text-slate-600 leading-relaxed text-sm">
+                 Coleta sistematizada de informações clínicas, comportamentais e contextuais, organizada para orientar o rastreio cognitivo e evitar aplicações desnecessárias ou mal direcionadas.
+               </p>
+            </div>
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
+               <div className="h-2 w-12 bg-blue-900 rounded-full mb-6"></div>
+               <h3 className="text-xl font-bold text-slate-900 mb-4">Base Técnica Antes dos Testes</h3>
+               <p className="text-slate-600 leading-relaxed text-sm">
+                 A anamnese antecede o rastreio, ajudando o profissional a definir foco, interpretar resultados with mais precisão e reduzir ruído clínico desde o início do acompanhamento.
+               </p>
+            </div>
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
+               <div className="h-2 w-12 bg-blue-900 rounded-full mb-6"></div>
+               <h3 className="text-xl font-bold text-slate-900 mb-4">Anamnese → Rastreio → Relatórios</h3>
+               <p className="text-slate-600 leading-relaxed text-sm">
+                 O profissional inicia pelo contexto clínico, aplica os testes cognitivos funcionais e recebe relatórios coerentes com a história do paciente, fortalecendo a tomada de decisão.
+               </p>
+            </div>
+          </div>
+          <p className="mt-10 text-center text-xs text-slate-400 max-w-2xl mx-auto">
+            A anamnese não substitui avaliação clínica aprofundada. Ela organiza o ponto de partida técnico para o rastreio funcional.
+          </p>
+        </Container>
+      </Section>
+
+      {/* Professional Plan Section */}
+      <Section className="bg-white">
+        <Container>
+          <SectionHeading 
+            title="Plano profissional — versão atual" 
+            subtitle="Acesso completo aos 6 testes cognitivos funcionais atualmente disponíveis no NeuroRastreio."
+          />
+          <div className="flex justify-center">
+            <div className="w-full max-w-lg bg-white p-8 md:p-10 rounded-3xl shadow-lg border border-slate-200 text-center">
+              <h3 className="text-2xl font-bold text-slate-900 mb-1">Plano Profissional — uso clínico individual</h3>
+              <p className="text-sm text-slate-500 font-medium mb-6">Aprendentes ilimitados • aplicação clínica contínua</p>
+              
+              <div className="mb-8">
+                <span className="text-4xl font-extrabold text-blue-900">R$ 97</span>
+                <span className="text-slate-500 text-lg font-medium ml-2">/ ano</span>
+              </div>
+
+              <ul className="space-y-4 mb-10 text-left">
+                {[
+                  "Aprendentes ilimitados",
+                  "6 testes cognitivos funcionais",
+                  "Rastreio neurocognitivo para crianças de 6 a 14 anos",
+                  "Relatório técnico para o profissional",
+                  "Relatório simplificado para os pais",
+                  "Aplicação remota via link seguro",
+                  "Precisão temporal em milissegundos",
+                  "Licença vinculada a 1 dispositivo ativo"
+                ].map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-teal-500 mt-0.5 flex-shrink-0" />
+                    <span className="text-slate-600 font-medium">{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <Button className="w-full text-lg py-4 mb-6">
+                Adquirir assinatura por dispositivo
+              </Button>
+
+              <p className="text-xs text-slate-400 leading-relaxed max-w-sm mx-auto">
+                Aprendentes ilimitados por assinatura. Cada assinatura corresponde a 1 dispositivo ativo.
+              </p>
+            </div>
+          </div>
+          <p className="mt-12 text-center text-xs text-slate-400 max-w-xl mx-auto italic">
+            Licença individual vinculada a dispositivo para garantir uso ético, estabilidade técnica e qualidade dos dados.
+          </p>
+        </Container>
+      </Section>
+
       {/* Testimonials Section */}
       <Section className="bg-white">
         <Container>
@@ -506,16 +592,13 @@ const App: React.FC = () => {
             <div className="absolute top-0 left-0 w-64 h-64 bg-white opacity-5 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
             <div className="absolute bottom-0 right-0 w-64 h-64 bg-teal-400 opacity-10 rounded-full translate-x-1/3 translate-y-1/3"></div>
             
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 relative z-10">Pare de decidir no escuro.</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 relative z-10">Decisão clínica começa com dados objetivos.</h2>
             <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto relative z-10">
-              Tenha dados cognitivos objetivos ao seu lado na próxima sessão.
+              Rastreio neurocognitivo funcional para orientar a próxima sessão com base técnica real.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
-              <Button className="bg-white text-blue-900 hover:bg-slate-100 text-lg px-8">
-                Ver Relatório de Exemplo
-              </Button>
+            <div className="flex justify-center relative z-10">
               <Button variant="secondary" className="bg-teal-500 text-white hover:bg-teal-600 border-none text-lg px-8">
-                Solicitar Demonstração
+                Veja a plataforma por dentro
               </Button>
             </div>
           </div>
